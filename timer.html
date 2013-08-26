@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            .timer {
+                width: 250px;
+                height: 250px;
+                
+                margin-left: 100px;
+                margin-top: 100px;
+                
+                background: #999;
+                border-radius: 100px 250px 100px 250px;
+                
+                -webkit-animation: spin 5s infinite;
+                -webkit-animation-timing-function:linear;
+                
+                position: absolute;
+            }
+            
+            .timer .inner {
+                background: white;
+                border-radius: 250px;
+                
+                width: 200px;
+                height: 200px;
+                
+                position: relative;
+                top: 25px;
+                left: 25px;
+                border: 1px solid #333;
+            }
+            
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    left:-10%;
+                    border-radius: 0 250px 0 250px;
+                }
+                
+                50% {
+                    -webkit-transform: rotate(360deg);
+                    left: 70%;
+                    border-radius: 100px 250px 100px 250px;
+                }
+                
+                100% {
+                    -webkit-transform: rotate(0deg);
+                    left: -10%;
+                    border-radius: 0 250px 0 250px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="timer">
+            <div class="inner"> </div>
+            <div class="mask"> </div>
+        </div>
+    </body>
+</html>
